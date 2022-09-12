@@ -1,0 +1,55 @@
+.avatarImage {
+    padding: 10px;
+    position: relative;
+
+    .circularProgressWrapper {
+        z-index: 4;
+        position: relative;
+        display: inline-block;
+        transform: rotateY(180deg);
+
+        .circularProgressParent {
+            transform: rotate(90deg);
+
+            .circularProgressPosition {
+                position: absolute;
+                font-size: 11px;
+                padding: 3px;
+                z-index: 9999;
+                border-radius: 100%;
+                transform: rotateY(180deg);
+
+                .circularProgressLabelWrapper {
+                    transform: rotate(90deg);
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    height: 1px;
+                    width: 1px;
+
+                    .circularProgressLabel {
+                        padding: 5px;
+                        background-color: var(--primary-color);
+                        border-radius: 100%;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .circularProgress {
+            svg {
+                color: var(--primary-color);
+            }
+        }
+    }
+
+    .img {
+        position: absolute;
+        top: 19px;
+        left: 16px;
+        width: 65px;
+        height: 65px;
+    }
+}
