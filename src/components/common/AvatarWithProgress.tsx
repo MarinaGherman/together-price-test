@@ -12,7 +12,7 @@ type Props = {
 const AvatarWithProgress: React.FC<Props> = ({ progress = 0, size = 80, src }) => {
     const [top, left] = useMemo(() => {
         const total = 100;
-        const radius = 38;
+        const radius = size / 2 - 2;
         const theta = 2 * Math.PI * (progress / total);
         const left = size / 2 - total / progress + radius * Math.sin(theta);
         const top = size / 2 - total / progress - radius * Math.cos(theta);
