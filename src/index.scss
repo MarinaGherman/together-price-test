@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #EDEFF5;
 }
 
 code {
@@ -17,4 +16,9 @@ code {
 :root {
   --primary-color: #6A3EEA;
   --card-background-color: #F9F9FC;
+  --service-background-color: #EAE8FE;
+  --button-succes-color: #79C27D;
+  --desc-color: #818181;
+  --btn-border-color: #B074FE;
+  --btn-bg-color: #EAE8FE;
 }

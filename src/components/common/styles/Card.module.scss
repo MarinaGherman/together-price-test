@@ -1,0 +1,58 @@
+.cardContainer {
+    margin: 50px;
+    width: 367px;
+    height: 122px;
+    background-color: var(--card-background-color);
+    border-radius: 8px;
+
+    .userContainer {
+        position: relative;
+        height: 81px;
+
+        .avatarBlock {
+            position: absolute;
+            top: -35px;
+        }
+
+        .infoBlock {
+            margin-left: 10px;
+            margin-top: 13px;
+
+            .name {
+                margin: 0;
+                line-height: 20px;
+                font-weight: bold;
+                font-size: 17px
+            }
+
+            .desc {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                color: var(--desc-color);
+            }
+        }
+    }
+    .serviceContainer {
+        height: 41px;
+        background-color: var(--service-background-color);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        .service {
+            color: var(--primary-color);
+            font-size: 14px;
+
+            .serviceName {
+               font-weight: bold;
+               text-decoration: underline;
+               cursor: pointer;
+            }
+        }
+    }
+}
