@@ -1,0 +1,41 @@
+.buttonContainer {
+    margin-top: 20px;
+
+    .done {
+        position: absolute;
+        top: 3px;
+        color: var(--desc-color);
+        opacity: 0.8;
+        font-size: 12px;
+    }
+
+    .btn {
+        width: 43px;
+        height: 42px;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &.btnAdd {
+            background: var(--btn-bg-color);
+            border: 1px solid var(--primary-color);
+
+            .addIcon {
+                color: var(--primary-color);
+                font-weight: bold;
+                font-size: 25px;
+            }
+        }
+
+        &.btnDone {
+            background: var(--card-background-color);
+            border: 1px solid var(--button-succes-color);
+
+            .doneIcon {
+                color: var(--button-succes-color);
+                font-weight: bold;
+                font-size: 25px;
+            }
+        }
+    }
+}
+
