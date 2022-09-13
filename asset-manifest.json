@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/together-price-test/static/css/main.8897dc75.css",
+    "main.js": "/together-price-test/static/js/main.a7ec2c01.js",
+    "index.html": "/together-price-test/index.html",
+    "main.8897dc75.css.map": "/together-price-test/static/css/main.8897dc75.css.map",
+    "main.a7ec2c01.js.map": "/together-price-test/static/js/main.a7ec2c01.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8897dc75.css",
+    "static/js/main.a7ec2c01.js"
+  ]
+}
