@@ -1,0 +1,27 @@
+.skeletonContainer {
+    position: relative;
+    margin: 50px;
+    width: 367px;
+
+    .skeletonMain {
+        position: relative;
+    }
+
+    .skeletonImg {
+        position: absolute;
+        top: -15px;
+        left: 10px;
+    }
+
+    .skeletonDesc {
+        margin-left: 5px;
+        position: absolute;
+        top: 30px;
+
+    }
+    .skeletonBtn {
+        position: absolute;
+        top: 30px;
+
+    }
+}
