@@ -1,26 +1,36 @@
 import Card from "./common/Card";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { ChangeEvent, useEffect } from "react";
 import getUsers from "../store/slice/actions/get-users";
 import { AppDispatch } from "../store";
-import { selectIsLoading, selectUsers } from "../store/slice/users-slice";
+import {
+    selectIsLoading,
+    selectPagination,
+    selectUsers,
+    setPage
+} from "../store/slice/users-slice";
 import CardsWithSkeleton from "./common/CardsWithSkeleton";
-import { Box } from "@mui/material";
+import { Box, Pagination } from "@mui/material";
 
 const Main = () => {
     const dispatch = useDispatch<AppDispatch>();
     const users = useSelector(selectUsers);
     const isLoading = useSelector(selectIsLoading);
+    const pagination = useSelector(selectPagination);
 
     useEffect(() => {
         dispatch(getUsers());
     }, []);
 
+    const handleChangePage = (_: ChangeEvent<unknown>, page: number) => {
+        dispatch(setPage(page));
+    };
+
     return (
         <Box>
             {isLoading ? (
                 <Box>
-                    {Array.from(Array(10).keys()).map((index) => (
+                    {Array.from(Array(5).keys()).map((index) => (
                         <Box key={index}>
                             <CardsWithSkeleton />
                         </Box>
@@ -37,6 +47,7 @@ const Main = () => {
                     />
                 ))
             )}
+            <Pagination count={pagination.totalPages} onChange={handleChangePage} />
         </Box>
     );
 };
